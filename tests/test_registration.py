@@ -1,6 +1,7 @@
 import pytest
 from pages import RegistrationPage, DashboardPage
 
+
 @pytest.mark.regression
 @pytest.mark.registration
 def test_successful_registration(registration_page: RegistrationPage, dashboard_page: DashboardPage):

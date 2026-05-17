@@ -4,7 +4,7 @@ from playwright.sync_api import Page, expect
 
 class DashboardPage(BasePage):
 
-    def __init__ (self, page: Page):
+    def __init__(self, page: Page):
         super().__init__(page)
 
         self.dashboard_title = page.get_by_test_id('dashboard-toolbar-title-text')

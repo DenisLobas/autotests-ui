@@ -4,7 +4,7 @@ from playwright.sync_api import Page, expect
 
 class RegistrationPage(BasePage):
 
-    def __init__ (self, page: Page):
+    def __init__(self, page: Page):
         super().__init__(page)
 
         self.email_input = page.get_by_test_id("registration-form-email-input").locator("input")
@@ -24,4 +24,3 @@ class RegistrationPage(BasePage):
 
     def click_login_button(self):
         self.registration_button.click()
-
