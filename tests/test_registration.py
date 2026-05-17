@@ -3,6 +3,12 @@ from pages import RegistrationPage, DashboardPage
 
 @pytest.mark.regression
 @pytest.mark.registration
+@pytest.mark.parametrize(
+    "email, username, password",
+    [
+        ("test@test.com", "TestUser", "123456"),
+    ]
+)
 def test_successful_registration(registration_page: RegistrationPage, dashboard_page: DashboardPage, email: str, username: str, password:str):
     registration_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
     registration_page.fill_login_form(email = email, username = username, password = password)
